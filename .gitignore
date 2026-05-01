@@ -1,0 +1,11 @@
+bin/
+obj/
+publish/
+
+.idea/
+*.sln.iml
+*.riderModule.iml
+
+_ReSharper.Caches/
+*.DotSettings.user
+
