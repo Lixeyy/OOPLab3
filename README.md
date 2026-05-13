@@ -11,9 +11,8 @@
 
 <img width="604" height="201" alt="image" src="https://github.com/user-attachments/assets/15122a1b-f4ae-467e-b65f-ef935021e98e" />
 
-
 ## Відео захисту
 
-[![Дивитися відео в Youtube](https://github.com/user-attachments/assets/91b354cd-b664-4d5c-8139-3884fbf547f0)](https://youtu.be/yNeIbKrJ3ns)
+[![Дивитися відео в Youtube](https://github.com/user-attachments/assets/815fe742-ac27-469f-aeef-48085de83c48)](https://youtu.be/uRzqVroRmaE)
 
-https://youtu.be/yNeIbKrJ3ns
+https://youtu.be/uRzqVroRmaE
