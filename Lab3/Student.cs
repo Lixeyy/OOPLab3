@@ -1,15 +1,9 @@
 ﻿namespace Lab3;
 
+/// <summary>Представляє студента.</summary>
 public class Student
 {
-    public required int NumberInGroup
-    {
-        get;
-        init => field = value < 0
-            ? throw new ArgumentException("Id cannot be negative", nameof(NumberInGroup))
-            : value;
-    }
-
+    /// <summary>Ім'я студента.</summary>
     public required string Name
     {
         get;
@@ -18,6 +12,7 @@ public class Student
             : value.Trim();
     }
 
+    /// <summary>Прізвище студента.</summary>
     public required string Surname
     {
         get;
@@ -26,6 +21,7 @@ public class Student
             : value.Trim();
     }
 
+    /// <summary>Назва групи.</summary>
     public required string Group
     {
         get;
@@ -34,6 +30,16 @@ public class Student
             : value.Trim();
     }
 
+    /// <summary>Номер студента у списку групи.</summary>
+    public required int NumberInGroup
+    {
+        get;
+        init => field = value < 0
+            ? throw new ArgumentException("Id cannot be negative", nameof(NumberInGroup))
+            : value;
+    }
+
+    /// <summary>Дата народження студента (необов'язково).</summary>
     public DateTime? DateOfBirth
     {
         get;
@@ -42,6 +48,14 @@ public class Student
             : value;
     } = null;
 
+    /// <summary>Повертає рядкове представлення даних студента.</summary>
+    public override string ToString()
+    {
+        var birthdayStr = DateOfBirth == null ? "N/A" : DateOfBirth?.ToShortDateString();
+        return $"Name: {Name} {Surname}; Group: {Group}; Number: {NumberInGroup}; Birthday: {birthdayStr}";
+    }
+
+    /// <summary>Перевіряє рівність поточного студента з іншим об'єктом.</summary>
     public override bool Equals(object? obj)
     {
         var otherStudent = obj as Student;
@@ -57,6 +71,7 @@ public class Student
             && DateOfBirth?.ToShortDateString() == otherStudent.DateOfBirth?.ToShortDateString();
     }
 
+    /// <summary>Повертає хеш-код студента.</summary>
     public override int GetHashCode()
     {
         return NumberInGroup.GetHashCode()
@@ -64,11 +79,5 @@ public class Student
                + Name.GetHashCode()
                + Surname.GetHashCode() 
                + DateOfBirth.GetHashCode();
-    }
-
-    public override string ToString()
-    {
-        var birthdayStr = DateOfBirth == null ? "N/A" : DateOfBirth?.ToShortDateString();
-        return $"Name: {Name} {Surname}; Group: {Group}; Number: {NumberInGroup}; Birthday: {birthdayStr}";
     }
 }
