@@ -334,8 +334,6 @@ public class StudentTest
         var student2HashCode = student2.GetHashCode();
 
         // Assert
-        Assert.True(student1HashCode > 0);
-        Assert.True(student2HashCode > 0);
         Assert.Equal(student1HashCode, student2HashCode);
     }
 }

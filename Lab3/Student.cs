@@ -51,7 +51,7 @@ public class Student
     /// <summary>Повертає рядкове представлення даних студента.</summary>
     public override string ToString()
     {
-        var birthdayStr = DateOfBirth == null ? "N/A" : DateOfBirth?.ToShortDateString();
+        var birthdayStr = DateOfBirth == null ? "N/A" : DateOfBirth?.ToString("dd.MM.yyyy");
         return $"Name: {Name} {Surname}; Group: {Group}; Number: {NumberInGroup}; Birthday: {birthdayStr}";
     }
 
